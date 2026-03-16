@@ -65,8 +65,9 @@ public class Admin {
         return this;
     }
 
-    public void setAdminName(String adminName) {
+    public Builder setAdminName(String adminName) {
         this.adminName = adminName;
+        return this;
     }
 
     public Builder setAdminRole(String adminRole) {
