@@ -7,7 +7,7 @@ public class Hospital{
     private String city;
     private String contactPerson;
     private String contactEmail;
-    private int contactPhone;
+    private String contactPhone;
     private String facilityType;
 
 // default constructor
@@ -49,7 +49,7 @@ public class Hospital{
         return contactPerson;
     }
 
-    public int getContactPhone() {
+    public String getContactPhone() {
         return contactPhone;
     }
 
@@ -86,7 +86,7 @@ public class Hospital{
         private String city;
         private String contactPerson;
         private String contactEmail;
-        private int contactPhone;
+        private String contactPhone;
         private String facilityType;
 
         public Builder setAddress(String address) {
@@ -109,7 +109,7 @@ public class Hospital{
             return this;
         }
 
-        public Builder setContactPhone(int contactPhone) {
+        public Builder setContactPhone(String contactPhone) {
             this.contactPhone = contactPhone;
             return this;
         }
