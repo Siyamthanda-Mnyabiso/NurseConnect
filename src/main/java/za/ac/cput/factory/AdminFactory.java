@@ -4,27 +4,19 @@ import za.ac.cput.domain.Admin;
 import za.ac.cput.util.Helper;
 
 public class AdminFactory {
-    public static Admin createAdmin(String id, String name, String email, String role, String password){
-        if(Helper.isIdValid(id)){
+    public static Admin createAdmin(String adminId, String adminName, String email, String adminRole, String password){
+        if(Helper.isNullOrEmpty(adminName) || Helper.isNullOrEmpty(adminId) || Helper.isNullOrEmpty(adminRole)){
             return null;
         }
-        if(Helper.isNullOrEmpty(name)){
-            return null;
-        }
-        if(Helper.isEmailValid(email)){
-            return null;
-        }
-        if(Helper.isAdminRoleValid(role)){
-            return null;
-        }
-        if(Helper.isPasswordValid(password)){
+
+        if(!Helper.isPasswordValid(password)){
             return null;
         }
         return new Admin.Builder()
-                .setAdminId(id)
-                .setAdminName(name)
-                .setAdminEmail(email)
-                .setAdminRole(role)
+                .setAdminId(adminId)
+                .setAdminName(adminName)
+                .setEmail(email)
+                .setAdminRole(adminRole)
                 .setPassword(password)
                 .build();
     }

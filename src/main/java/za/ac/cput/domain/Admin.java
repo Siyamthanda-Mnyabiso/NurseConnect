@@ -3,7 +3,7 @@ package za.ac.cput.domain;
 public class Admin {
     private String adminId;
     private String adminName;
-    private String adminEmail;
+    private String email;
     private String adminRole;
     private String password;
 
@@ -11,7 +11,7 @@ public class Admin {
     private Admin(Builder builder){
         this.adminId = builder.adminId;
         this.adminName = builder.adminName;
-        this.adminEmail = builder.adminEmail;
+        this.email = builder.email;
         this.adminRole = builder.adminRole;
         this.password = builder.password;
     }
@@ -24,8 +24,8 @@ public class Admin {
         return adminName;
     }
 
-    public String getAdminEmail() {
-        return adminEmail;
+    public String getEmail() {
+        return email;
     }
 
     public String getAdminRole() {
@@ -38,23 +38,24 @@ public class Admin {
 
 // ============== FORMAT ===================
 
+
     @Override
     public String toString() {
         return "Admin{" +
                 "adminId='" + adminId + '\'' +
                 ", adminName='" + adminName + '\'' +
-                ", adminEmail='" + adminEmail + '\'' +
+                ", email='" + email + '\'' +
                 ", adminRole='" + adminRole + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
 
-// ============== BUILDER CLASS ============
+    // ============== BUILDER CLASS ============
     public static class Builder {
 
     private String adminId;
     private String adminName;
-    private String adminEmail;
+    private String email;
     private String adminRole;
     private String password;
 
@@ -80,10 +81,20 @@ public class Admin {
         return this;
     }
 
-    public Builder setAdminEmail(String adminEmail) {
-        this.adminEmail = adminEmail;
+    public Builder setEmail(String email) {
+        this.email = email;
         return this;
     }
+
+    public Builder copy(Admin admin){
+        this.adminId = admin.adminId;
+        this.adminName = admin.adminName;
+        this.email = admin.email;
+        this.adminRole = admin.adminRole;
+        this.password = admin.password;
+        return this;
+    }
+
 
     public Admin build() {
         return new Admin(this);
