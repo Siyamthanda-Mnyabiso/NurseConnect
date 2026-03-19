@@ -9,9 +9,9 @@ public class NurseFactory {
             return null;
         }
 
-        //if (!Helper.isValidEmail(Email)){
-        //    return null;
-       // }
+        if (!Helper.isValidEmail(Email)){
+            return null;
+        }
 
 
 

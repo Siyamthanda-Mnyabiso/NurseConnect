@@ -1,4 +1,10 @@
 package za.ac.cput.util;
+
+
+import com.google.i18n.phonenumbers.PhoneNumberUtil;
+import com.google.i18n.phonenumbers.Phonenumber;
+import org.apache.commons.validator.routines.EmailValidator;
+
 public class Helper {
     public static boolean isNullOrEmpty(String str) {
         if ((str == null) || (str.isEmpty())) {
@@ -7,12 +13,19 @@ public class Helper {
         return false;
     }
 
+    public static boolean isValidEmail(String email) {
+        EmailValidator validator = EmailValidator.getInstance();
+        return validator.isValid(email);
+    }
+
+
     public static boolean isValidLicenseNum(String license) {
         // Example: Must start with RN, followed by 5-6 digits
         // Example Valid: RN123456, RN98765
         String regex = "^RN\\d{5,6}$";
         return license != null && license.matches(regex);
     }
+
 
     public static boolean isValidPhoneNumber(String phone) {
         // Simple regex: 10 digits, optional hyphens/spaces, optionally starts with 1
@@ -24,11 +37,4 @@ public class Helper {
         return phone.matches(regex);
 
     }
-
-    public static boolean isPasswordValid(String password){
-        String regex = "^([?=.*[a-z][!=.*[A-Z](?=.*\\d)(?=.*[!@#$%^&*=+]){8}+#";
-        if( password != null && password.matches(password)){
-            return true;
-        }
-        return false;
-    }}
+}

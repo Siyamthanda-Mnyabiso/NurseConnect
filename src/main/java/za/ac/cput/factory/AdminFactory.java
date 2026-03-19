@@ -9,9 +9,12 @@ public class AdminFactory {
             return null;
         }
 
-        if(!Helper.isPasswordValid(password)){
+        if (! Helper.isValidEmail(email)){
             return null;
         }
+
+
+
         return new Admin.Builder()
                 .setAdminId(adminId)
                 .setAdminName(adminName)

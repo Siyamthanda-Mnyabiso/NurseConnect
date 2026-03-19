@@ -23,7 +23,7 @@ public class Shift {
         this.startTime = startTime;
         this.endTime = endTime;
         this.requiredQualification = requiredQualification;
-        this.Department = department;
+        this.Department = Department;
         this.hourlyRate = hourlyRate;
         this.status = status;
     }
@@ -52,8 +52,8 @@ public class Shift {
         return requiredQualification;
     }
 
-    private String getDepartment() {
-        return department;
+    public String getDepartment() {
+        return Department;
     }
 
     private float getHourlyRate() {
@@ -65,20 +65,19 @@ public class Shift {
     }
 
     @Override
-    private String toString() {
+    public String toString() {
         return "Shift{" +
-                "ShiftID" + shiftId + '\'' +
-                "HospitalID" + hospitalId + '\'' +
-                "ShiftDate" + shiftDate + '\'' +
-                "StartTime" + startTime + '\'' +
-                "EndTime" + endTime + '\'' +
-                "RequiredQualification" + requiredQualification '\'' +
-                "Department" + department + '\'' +
-                "HourlyRate" + hourlyRate + '\'' +
-                "Status" + status + '\'' +
+                "shiftId=" + shiftId +
+                ", hospitalId=" + hospitalId +
+                ", shiftDate=" + shiftDate +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", requiredQualification='" + requiredQualification + '\'' +
+                ", Department='" + Department + '\'' +
+                ", hourlyRate=" + hourlyRate +
+                ", status='" + status + '\'' +
                 '}';
     }
-
 
     public static class Builder {
         private int shiftId;
@@ -90,47 +89,54 @@ public class Shift {
         private String department;
         private float hourlyRate;
         private String status;
-    }
 
-    public Builder setShiftId(int shiftId) {
-        this.shiftId = shiftId;
-    }
+        public Builder setShiftId(int shiftId) {
+            this.shiftId = shiftId;
+            return this;
+        }
 
-    public Builder setHospitalId(int hospitalId) {
-        this.hospitalId = hospitalId;
-    }
+        public Builder setHospitalId(int hospitalId) {
+            this.hospitalId = hospitalId;
+            return this;
+        }
 
-    public Builder setShiftDate(int shiftDate) {
-        this.shiftDate = shiftDate;
-    }
+        public Builder setShiftDate(int shiftDate) {
+            this.shiftDate = shiftDate;
+            return this;
+        }
 
-    public Builder setStartTime(int startTime) {
-        this.startTime = startTime;
-    }
+        public Builder setStartTime(int startTime) {
+            this.startTime = startTime;
+            return this;
+        }
 
-    public Builder setEndTime(int endTime) {
-        this.endTime = endTime;
-    }
+        public Builder setEndTime(int endTime) {
+            this.endTime = endTime;
+            return this;
+        }
 
-    public Builder setRequiredQualification(String requiredQualification) {
-        this.requiredQualification = requiredQualification;
-    }
+        public Builder setRequiredQualification(String requiredQualification) {
+            this.requiredQualification = requiredQualification;
+            return this;
+        }
 
-    public Builder setDepartment(String department) {
-        this.department = department;
-    }
+        public Builder setDepartment(String department) {
+            this.department = department;
+            return this;
+        }
 
-    public Builder setHourlyRate(float hourlyRate) {
-        this.hourlyRate = hourlyRate;
-    }
+        public Builder setHourlyRate(float hourlyRate) {
+            this.hourlyRate = hourlyRate;
+            return this;
+        }
 
-    public Builder setStatus(String status) {
-        this.status = status;
-    }
+        public Builder setStatus(String status) {
+            this.status = status;
+            return this;
+        }
 
-    public Shift build() {
-        return new Shift(this)
+        public Shift build() {
+            return new Shift(this);
+        }
     }
-
-}
 }
