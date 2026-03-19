@@ -7,7 +7,7 @@ public class Admin {
     private String adminRole;
     private String password;
 
-// ============== BUILDER CONSTRUCTOR ======
+    // ============== BUILDER CONSTRUCTOR ======
     private Admin(Builder builder){
         this.adminId = builder.adminId;
         this.adminName = builder.adminName;
@@ -15,7 +15,7 @@ public class Admin {
         this.adminRole = builder.adminRole;
         this.password = builder.password;
     }
-// ============== GETTERS ==================
+    // ============== GETTERS ==================
     public String getAdminId() {
         return adminId;
     }
@@ -53,51 +53,51 @@ public class Admin {
     // ============== BUILDER CLASS ============
     public static class Builder {
 
-    private String adminId;
-    private String adminName;
-    private String email;
-    private String adminRole;
-    private String password;
+        private String adminId;
+        private String adminName;
+        private String email;
+        private String adminRole;
+        private String password;
 
 // ============== SETTERS ==================
 
-    public Builder setAdminId(String adminId) {
-        this.adminId = adminId;
-        return this;
-    }
+        public Builder setAdminId(String adminId) {
+            this.adminId = adminId;
+            return this;
+        }
 
-    public Builder setAdminName(String adminName) {
-        this.adminName = adminName;
-        return this;
-    }
+        public Builder setAdminName(String adminName) {
+            this.adminName = adminName;
+            return this;
+        }
 
-    public Builder setAdminRole(String adminRole) {
-        this.adminRole = adminRole;
-        return this;
-    }
+        public Builder setAdminRole(String adminRole) {
+            this.adminRole = adminRole;
+            return this;
+        }
 
-    public Builder setPassword(String password) {
-        this.password = password;
-        return this;
-    }
+        public Builder setPassword(String password) {
+            this.password = password;
+            return this;
+        }
 
-    public Builder setEmail(String email) {
-        this.email = email;
-        return this;
-    }
+        public Builder setEmail(String email) {
+            this.email = email;
+            return this;
+        }
 
-    public Builder copy(Admin admin){
-        this.adminId = admin.adminId;
-        this.adminName = admin.adminName;
-        this.email = admin.email;
-        this.adminRole = admin.adminRole;
-        this.password = admin.password;
-        return this;
-    }
+        public Builder copy(Admin admin){
+            this.adminId = admin.adminId;
+            this.adminName = admin.adminName;
+            this.email = admin.email;
+            this.adminRole = admin.adminRole;
+            this.password = admin.password;
+            return this;
+        }
 
 
-    public Admin build() {
-        return new Admin(this);
+        public Admin build() {
+            return new Admin(this);
+        }
     }
-}
 }
