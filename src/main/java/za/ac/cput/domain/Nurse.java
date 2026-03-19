@@ -5,13 +5,13 @@ public class Nurse {
     private String FirstName;
     private String LastName;
     private String Email;
-    private int PhoneNumber;
+    private String PhoneNumber;
     private String Address;
     private String Qualification;
     private String Specialization;
-    private double  YearsOfExperience;
+    private String  YearsOfExperience;
     private boolean AvailabilityStatus;
-    private int LicenseNumber;
+    private String LicenseNumber;
 
 
     private Nurse() {
@@ -47,7 +47,7 @@ public class Nurse {
         return Email;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return PhoneNumber;
     }
 
@@ -63,7 +63,7 @@ public class Nurse {
         return Specialization;
     }
 
-    public double getYearsOfExperience() {
+    public String getYearsOfExperience() {
         return YearsOfExperience;
     }
 
@@ -71,7 +71,7 @@ public class Nurse {
         return AvailabilityStatus;
     }
 
-    public int getLicenseNumber() {
+    public String getLicenseNumber() {
         return LicenseNumber;
     }
 
@@ -99,16 +99,16 @@ public class Nurse {
         private String FirstName;
         private String LastName;
         private String Email;
-        private int PhoneNumber;
+        private String PhoneNumber;
         private String Address;
         private String Qualification;
         private String Specialization;
-        private double  YearsOfExperience;
+        private String  YearsOfExperience;
         private boolean AvailabilityStatus;
-        private int LicenseNumber;
+        private String LicenseNumber;
 
         public Builder setNurseID(String nurseID) {
-            this.NurseID = NurseID;
+            this.NurseID = nurseID;
             return this;
         }
 
@@ -127,7 +127,7 @@ public class Nurse {
             return this;
         }
 
-        public Builder setPhoneNumber(int phoneNumber) {
+        public Builder setPhoneNumber(String phoneNumber) {
             this.PhoneNumber = phoneNumber;
             return this;
         }
@@ -147,7 +147,7 @@ public class Nurse {
             return this;
         }
 
-        public Builder setYearsOfExperience(double yearsOfExperience) {
+        public Builder setYearsOfExperience(String yearsOfExperience) {
             this.YearsOfExperience = yearsOfExperience;
             return this;
         }
@@ -157,7 +157,7 @@ public class Nurse {
             return this;
         }
 
-        public Builder setLicenseNumber(int licenseNumber) {
+        public Builder setLicenseNumber(String licenseNumber) {
             this.LicenseNumber = licenseNumber;
             return this;
         }
