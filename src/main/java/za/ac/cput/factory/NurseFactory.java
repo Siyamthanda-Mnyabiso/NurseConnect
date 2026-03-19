@@ -9,9 +9,9 @@ public class NurseFactory {
             return null;
         }
 
-        if (!Helper.isValidEmail(Email)){
-            return null;
-        }
+        //if (!Helper.isValidEmail(Email)){
+        //    return null;
+       // }
 
 
 
@@ -30,7 +30,7 @@ public class NurseFactory {
                 .setAddress(Address)
                 .setFirstName(FirstName)
                 .setLastName(LastName)
-                .setEmail(Email)
+                //.setEmail(Email)
                 .setQualification(Qualification)
                 .setSpecialization(Specialization)
                 .setYearsOfExperience(YearsOfExperience)

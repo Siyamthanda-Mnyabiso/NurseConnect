@@ -17,15 +17,15 @@ public class Shift {
     }
 
     private Shift(Builder builder) {
-        this.shiftId = builder.shiftId;
-        this.hospitalId = builder.hospitalId;
-        this.shiftDate = builder.shiftDate;
-        this.startTime = builder.startTime;
-        this.endTime = builder.endTime;
-        this.requiredQualification = builder.requiredQualification;
-        this.Department = builder.department;
-        this.hourlyRate = builder.hourlyRate;
-        this.status = builder.status;
+        this.shiftId = shiftId;
+        this.hospitalId = hospitalId;
+        this.shiftDate = shiftDate;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.requiredQualification = requiredQualification;
+        this.Department = department;
+        this.hourlyRate = hourlyRate;
+        this.status = status;
     }
 
     private int getShiftId() {
@@ -53,7 +53,7 @@ public class Shift {
     }
 
     private String getDepartment() {
-        return Department;
+        return department;
     }
 
     private float getHourlyRate() {
@@ -65,19 +65,20 @@ public class Shift {
     }
 
     @Override
-    public String toString() {
+    private String toString() {
         return "Shift{" +
-                "shiftId=" + shiftId +
-                ", hospitalId=" + hospitalId +
-                ", shiftDate=" + shiftDate +
-                ", startTime=" + startTime +
-                ", endTime=" + endTime +
-                ", requiredQualification='" + requiredQualification + '\'' +
-                ", Department='" + Department + '\'' +
-                ", hourlyRate=" + hourlyRate +
-                ", status='" + status + '\'' +
+                "ShiftID" + shiftId + '\'' +
+                "HospitalID" + hospitalId + '\'' +
+                "ShiftDate" + shiftDate + '\'' +
+                "StartTime" + startTime + '\'' +
+                "EndTime" + endTime + '\'' +
+                "RequiredQualification" + requiredQualification '\'' +
+                "Department" + department + '\'' +
+                "HourlyRate" + hourlyRate + '\'' +
+                "Status" + status + '\'' +
                 '}';
     }
+
 
     public static class Builder {
         private int shiftId;
@@ -89,54 +90,47 @@ public class Shift {
         private String department;
         private float hourlyRate;
         private String status;
-
-        public Builder setShiftId(int shiftId) {
-            this.shiftId = shiftId;
-            return this;
-        }
-
-        public Builder setHospitalId(int hospitalId) {
-            this.hospitalId = hospitalId;
-            return this;
-        }
-
-        public Builder setShiftDate(int shiftDate) {
-            this.shiftDate = shiftDate;
-            return this;
-        }
-
-        public Builder setStartTime(int startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-
-        public Builder setEndTime(int endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-
-        public Builder setRequiredQualification(String requiredQualification) {
-            this.requiredQualification = requiredQualification;
-            return this;
-        }
-
-        public Builder setDepartment(String department) {
-            this.department = department;
-            return this;
-        }
-
-        public Builder setHourlyRate(float hourlyRate) {
-            this.hourlyRate = hourlyRate;
-            return this;
-        }
-
-        public Builder setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-
-        public Shift build() {
-            return new Shift(this);
-        }
     }
+
+    public Builder setShiftId(int shiftId) {
+        this.shiftId = shiftId;
+    }
+
+    public Builder setHospitalId(int hospitalId) {
+        this.hospitalId = hospitalId;
+    }
+
+    public Builder setShiftDate(int shiftDate) {
+        this.shiftDate = shiftDate;
+    }
+
+    public Builder setStartTime(int startTime) {
+        this.startTime = startTime;
+    }
+
+    public Builder setEndTime(int endTime) {
+        this.endTime = endTime;
+    }
+
+    public Builder setRequiredQualification(String requiredQualification) {
+        this.requiredQualification = requiredQualification;
+    }
+
+    public Builder setDepartment(String department) {
+        this.department = department;
+    }
+
+    public Builder setHourlyRate(float hourlyRate) {
+        this.hourlyRate = hourlyRate;
+    }
+
+    public Builder setStatus(String status) {
+        this.status = status;
+    }
+
+    public Shift build() {
+        return new Shift(this)
+    }
+
+}
 }
