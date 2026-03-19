@@ -94,42 +94,51 @@ public class Shift {
 
     public Builder setShiftId(int shiftId) {
         this.shiftId = shiftId;
+        return this;
     }
 
     public Builder setHospitalId(int hospitalId) {
         this.hospitalId = hospitalId;
+        return this.
     }
 
     public Builder setShiftDate(int shiftDate) {
         this.shiftDate = shiftDate;
+        return this;
     }
 
     public Builder setStartTime(int startTime) {
         this.startTime = startTime;
+        return this;
     }
 
     public Builder setEndTime(int endTime) {
         this.endTime = endTime;
+        return this;
     }
 
     public Builder setRequiredQualification(String requiredQualification) {
         this.requiredQualification = requiredQualification;
+        return this;
     }
 
     public Builder setDepartment(String department) {
         this.department = department;
+        return this;
     }
 
     public Builder setHourlyRate(float hourlyRate) {
         this.hourlyRate = hourlyRate;
+        return this;
     }
 
     public Builder setStatus(String status) {
         this.status = status;
+        return this;
     }
 
     public Shift build() {
-        return new Shift(this)
+        return new Shift(this);
     }
 
 }
