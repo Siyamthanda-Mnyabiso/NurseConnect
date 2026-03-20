@@ -66,6 +66,17 @@ public class Hospital{
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Hospital hospital = (Hospital) o;
+        return Objects.equals(hospitalId, hospital.hospitalId); // comparing hospitals Id if same or not
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(hospitalId);  // giving uniqueness of hospital ID
+    }
+
+    @Override
     public String toString() {
         return "Hospital{" +
                 "address='" + address + '\'' +
