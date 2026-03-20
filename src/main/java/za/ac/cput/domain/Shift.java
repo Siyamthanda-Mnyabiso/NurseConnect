@@ -1,15 +1,20 @@
 package za.ac.cput.domain;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Objects;
+
 public class Shift {
 
-    private int shiftId;
-    private int hospitalId;
-    private int shiftDate;
-    private int startTime;
-    private int endTime;
+    private String shiftId;
+    private String hospitalId;
+    private LocalDate shiftDate;
+    private LocalTime startTime;
+    private LocalTime endTime;
     private String requiredQualification;
     private String Department;
-    private float hourlyRate;
+    private BigDecimal hourlyRate;
     private String status;
 
     private Shift() {
@@ -17,38 +22,38 @@ public class Shift {
     }
 
     private Shift(Builder builder) {
-        this.shiftId = shiftId;
-        this.hospitalId = hospitalId;
-        this.shiftDate = shiftDate;
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.requiredQualification = requiredQualification;
-        this.Department = Department;
-        this.hourlyRate = hourlyRate;
-        this.status = status;
+        this.shiftId = builder.shiftId;
+        this.hospitalId = builder.hospitalId;
+        this.shiftDate = builder.shiftDate;
+        this.startTime = builder.startTime;
+        this.endTime = builder.endTime;
+        this.requiredQualification = builder.requiredQualification;
+        this.Department = builder.department;
+        this.hourlyRate = builder.hourlyRate;
+        this.status = builder.status;
     }
 
-    private int getShiftId() {
+    public String getShiftId() {
         return shiftId;
     }
 
-    private int getHospitalId() {
+    public String getHospitalId() {
         return hospitalId;
     }
 
-    private int getShiftDate() {
+    public LocalDate getShiftDate() {
         return shiftDate;
     }
 
-    private int getStartTime() {
+    public LocalTime getStartTime() {
         return startTime;
     }
 
-    private int getEndTime() {
+    public LocalTime getEndTime() {
         return endTime;
     }
 
-    private String getRequiredQualification() {
+    public String getRequiredQualification() {
         return requiredQualification;
     }
 
@@ -56,11 +61,11 @@ public class Shift {
         return Department;
     }
 
-    private float getHourlyRate() {
+    public BigDecimal getHourlyRate() {
         return hourlyRate;
     }
 
-    private String getStatus() {
+    public String getStatus() {
         return status;
     }
 
@@ -79,38 +84,51 @@ public class Shift {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if(!(o instanceof Shift)) return false;
+        Shift shift = (Shift) o;
+        return shiftId.equals(shift.shiftId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(shiftId);
+    }
+
     public static class Builder {
-        private int shiftId;
-        private int hospitalId;
-        private int shiftDate;
-        private int startTime;
-        private int endTime;
+        private String shiftId;
+        private String hospitalId;
+        private LocalDate shiftDate;
+        private LocalTime startTime;
+        private LocalTime endTime;
         private String requiredQualification;
         private String department;
-        private float hourlyRate;
+        private BigDecimal hourlyRate;
         private String status;
 
-        public Builder setShiftId(int shiftId) {
+        public Builder setShiftId(String shiftId) {
             this.shiftId = shiftId;
             return this;
         }
 
-        public Builder setHospitalId(int hospitalId) {
+        public Builder setHospitalId(String hospitalId) {
             this.hospitalId = hospitalId;
             return this;
         }
 
-        public Builder setShiftDate(int shiftDate) {
+        public Builder setShiftDate(LocalDate shiftDate) {
             this.shiftDate = shiftDate;
             return this;
         }
 
-        public Builder setStartTime(int startTime) {
+        public Builder setStartTime(LocalTime startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setEndTime(int endTime) {
+        public Builder setEndTime(LocalTime endTime) {
             this.endTime = endTime;
             return this;
         }
@@ -125,7 +143,7 @@ public class Shift {
             return this;
         }
 
-        public Builder setHourlyRate(float hourlyRate) {
+        public Builder setHourlyRate(BigDecimal hourlyRate) {
             this.hourlyRate = hourlyRate;
             return this;
         }
