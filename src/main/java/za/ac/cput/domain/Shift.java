@@ -1,9 +1,7 @@
 package za.ac.cput.domain;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Objects;
 
 public class Shift {
 
@@ -13,8 +11,8 @@ public class Shift {
     private LocalTime startTime;
     private LocalTime endTime;
     private String requiredQualification;
-    private String Department;
-    private BigDecimal hourlyRate;
+    private String department;
+    private double hourlyRate;
     private String status;
 
     private Shift() {
@@ -28,28 +26,28 @@ public class Shift {
         this.startTime = builder.startTime;
         this.endTime = builder.endTime;
         this.requiredQualification = builder.requiredQualification;
-        this.Department = builder.department;
+        this.department = builder.department;
         this.hourlyRate = builder.hourlyRate;
         this.status = builder.status;
     }
 
-    public String getShiftId() {
+    private String getShiftId() {
         return shiftId;
     }
 
-    public String getHospitalId() {
+    private String getHospitalId() {
         return hospitalId;
     }
 
-    public LocalDate getShiftDate() {
+    private LocalDate getShiftDate() {
         return shiftDate;
     }
 
-    public LocalTime getStartTime() {
+    private LocalTime getStartTime() {
         return startTime;
     }
 
-    public LocalTime getEndTime() {
+    private LocalTime getEndTime() {
         return endTime;
     }
 
@@ -58,11 +56,11 @@ public class Shift {
     }
 
     public String getDepartment() {
-        return Department;
+        return department;
     }
 
-    public BigDecimal getHourlyRate() {
-        return hourlyRate;
+    private double getHourlyRate() {
+        return  hourlyRate;
     }
 
     public String getStatus() {
@@ -78,7 +76,7 @@ public class Shift {
                 ", startTime=" + startTime +
                 ", endTime=" + endTime +
                 ", requiredQualification='" + requiredQualification + '\'' +
-                ", Department='" + Department + '\'' +
+                ", Department='" + department + '\'' +
                 ", hourlyRate=" + hourlyRate +
                 ", status='" + status + '\'' +
                 '}';
@@ -105,7 +103,7 @@ public class Shift {
         private LocalTime endTime;
         private String requiredQualification;
         private String department;
-        private BigDecimal hourlyRate;
+        private double hourlyRate;
         private String status;
 
         public Builder setShiftId(String shiftId) {
@@ -143,7 +141,7 @@ public class Shift {
             return this;
         }
 
-        public Builder setHourlyRate(BigDecimal hourlyRate) {
+        public Builder setHourlyRate(double hourlyRate) {
             this.hourlyRate = hourlyRate;
             return this;
         }
