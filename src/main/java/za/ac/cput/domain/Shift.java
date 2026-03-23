@@ -51,7 +51,7 @@ public class Shift {
         return endTime;
     }
 
-    private String getRequiredQualification() {
+    public String getRequiredQualification() {
         return requiredQualification;
     }
 
@@ -63,7 +63,7 @@ public class Shift {
         return  hourlyRate;
     }
 
-    private String getStatus() {
+    public String getStatus() {
         return status;
     }
 
@@ -80,6 +80,19 @@ public class Shift {
                 ", hourlyRate=" + hourlyRate +
                 ", status='" + status + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if(!(o instanceof Shift)) return false;
+        Shift shift = (Shift) o;
+        return shiftId.equals(shift.shiftId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(shiftId);
     }
 
     public static class Builder {
