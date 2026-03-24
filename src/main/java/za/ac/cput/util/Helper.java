@@ -7,6 +7,8 @@ import com.google.i18n.phonenumbers.Phonenumber;
 import org.apache.commons.validator.routines.EmailValidator;
 import org.apache.commons.validator.routines.RegexValidator;
 
+import java.time.LocalTime;
+
 public class Helper {
   
     public static boolean isValidHospitalId(String hospitalId) {
@@ -45,5 +47,20 @@ public class Helper {
 
         return phone.matches(regex);
 
+    }
+
+    public static boolean isAfter(LocalTime end){
+        LocalTime start;
+        if(!end.isAfter(start)){
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isBeforeShiftDate(LocalDate shiftDate){
+        if(shiftDate.isBefore(LocalDate.now)){
+            return false;
+        }
+        return true;
     }
 }

@@ -27,6 +27,15 @@ public class ShiftFactory {
             return null;
         }
 
+        if(Helper.isAfter(endTime)){
+            return null;
+        }
+
+        if(Helper.isBefore(shiftDate)){
+            return null;
+        }
+
+
         return new Shift.Builder()
                 .setShiftId(shiftId)
                 .setHospitalId(hospitalId)
