@@ -16,6 +16,8 @@ public class Main {
         Booking booking = BookingFactory.createBooking("567489032","0331","30 March 2026","Available") ;
         System.out.println(booking);
 
+        Nurse nurse = NurseFactory.createNurse("809119078", "Noluthando", "Mnyabiso", "nolu@gmail.com", "0896746356", "143 Sir Lowry Rd, Foreshore, Cape Town, 8001", "Nursing Science", "Midwife", "6 years", true, "RN978905");
+
     }
 
 }
