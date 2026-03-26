@@ -6,8 +6,8 @@ import za.ac.cput.util.Helper;
 
 public class HospitalFactory {
 
-    public static Hospital createHospital(String hospitalId,String hospitalName,String address,String contactEmail,String City,String contactPerson,String facilityType,String contactPhone){
-        if (Helper.isNullorEmpty(hospitalId)|| Helper.isNullorEmpty(hospitalName) ||Helper.isNullorEmpty(address)|| Helper.isNullorEmpty(contactEmail)|| Helper.isNullorEmpty(city)|| Helper.isNullorEmpty(contactPerson) || Helper.isNullorEmpty(facilityType)|| Helper.isNullorEmpty(contactPhone)){
+    public static Hospital createHospital(String hospitalId,String hospitalName,String address,String contactEmail,String city,String contactPerson,String facilityType,String contactPhone){
+        if (Helper.isNullOrEmpty(hospitalId)|| Helper.isNullOrEmpty(hospitalName) ||Helper.isNullOrEmpty(address)|| Helper.isNullOrEmpty(contactEmail)|| Helper.isNullOrEmpty(city)|| Helper.isNullOrEmpty(contactPerson) || Helper.isNullOrEmpty(facilityType)|| Helper.isNullOrEmpty(contactPhone)){
             return null;
         }
 

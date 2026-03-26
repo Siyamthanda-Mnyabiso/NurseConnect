@@ -9,10 +9,12 @@ public class AdminFactory {
             return null;
         }
 
-        if (! Helper.isValidEmail(email)){
+        if (!Helper.isValidEmail(email)){
             return null;
         }
-
+        if(!Helper.isPasswordValid(password)){
+            return null;
+        }
 
 
         return new Admin.Builder()
