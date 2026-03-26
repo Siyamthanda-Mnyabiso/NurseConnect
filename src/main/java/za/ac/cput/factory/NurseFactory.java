@@ -19,6 +19,7 @@ public class NurseFactory {
             return null;
         }
 
+
         if (!Helper.isValidLicenseNum(LicenseNumber)){
             return null;
         }

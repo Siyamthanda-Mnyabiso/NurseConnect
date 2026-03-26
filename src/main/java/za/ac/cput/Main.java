@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Booking booking = BookingFactory.createBooking("567489032","0331","30 March 2026","Available") ;
+        Booking booking = BookingFactory.createBooking("567489032", "0331", "30 March 2026", "Available");
         System.out.println(booking);
 
     }

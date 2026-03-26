@@ -1,5 +1,7 @@
 package za.ac.cput.domain;
 
+
+
 public class Hospital{
     private String hospitalId;
     private String hospitalName;
