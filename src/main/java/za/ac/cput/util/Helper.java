@@ -8,13 +8,14 @@ import org.apache.commons.validator.routines.EmailValidator;
 import org.apache.commons.validator.routines.RegexValidator;
 
 public class Helper {
-  
+
     public static boolean isValidHospitalId(String hospitalId) {
         RegexValidator validator = new RegexValidator("^H[0-9]{3}$");// takes pattern of chosen validation
         return validator.isValid(hospitalId);
+
     }
-  
-  
+
+
     public static boolean isNullOrEmpty(String str) {
         if ((str == null) || (str.isEmpty())) {
             return true;
@@ -45,5 +46,14 @@ public class Helper {
 
         return phone.matches(regex);
 
+    }
+
+    public static boolean isPasswordValid(String password) {
+        String regex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[+!@#$%^&*?<>]).{8,}$";
+        if( password != null && password.matches(regex)){
+            return true;
+        }
+
+        return false;
     }
 }

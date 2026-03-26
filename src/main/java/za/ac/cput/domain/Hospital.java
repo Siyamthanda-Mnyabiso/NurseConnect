@@ -1,6 +1,6 @@
 package za.ac.cput.domain;
 
-
+import java.util.Objects;
 
 public class Hospital{
     private String hospitalId;

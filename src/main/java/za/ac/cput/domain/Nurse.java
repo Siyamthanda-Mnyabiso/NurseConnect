@@ -161,6 +161,22 @@ public class Nurse {
             this.LicenseNumber = licenseNumber;
             return this;
         }
+
+        public Nurse.Builder copy (Nurse nurse){
+            this.NurseID = nurse.NurseID;
+            this.FirstName = nurse.FirstName;
+            this.Email = nurse.Email;
+            this.LastName = nurse.LastName;
+            this.PhoneNumber = nurse.PhoneNumber;
+            this.Address = nurse.Address;
+            this.Qualification = nurse.Qualification;
+            this.Specialization = nurse.Specialization;
+            this.YearsOfExperience = nurse.YearsOfExperience;
+            this.AvailabilityStatus = nurse.AvailabilityStatus;
+            this.LicenseNumber = nurse.LicenseNumber;
+            return this;
+        }
+
         public Nurse build (){ return new Nurse(this); }
     }
 }
