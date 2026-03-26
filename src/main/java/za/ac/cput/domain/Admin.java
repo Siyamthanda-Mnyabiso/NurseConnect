@@ -1,5 +1,7 @@
 package za.ac.cput.domain;
 
+import za.ac.cput.util.Helper;
+
 public class Admin {
     private String adminId;
     private String adminName;
@@ -97,7 +99,14 @@ public class Admin {
 
 
         public Admin build() {
-            return new Admin(this);
+            if(password == null || !Helper.isPasswordValid(password)){
+                throw  new IllegalArgumentException("Password should be atleast 8 characters, with upper and Lower characters, digits");
+            }
+            if(email == null || !Helper.isValidEmail(email)){
+                throw new IllegalArgumentException("Email invalid, try again.");
+            }
+                return new Admin(this);
+
         }
     }
 }
