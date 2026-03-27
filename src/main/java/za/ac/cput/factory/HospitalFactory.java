@@ -1,3 +1,9 @@
+
+// HospitalFactory.java
+// Author : Luxolo Matshikiza (219098751)
+// Date : 19 March 2026
+
+
 package za.ac.cput.factory;
 
 import za.ac.cput.domain.Hospital;
