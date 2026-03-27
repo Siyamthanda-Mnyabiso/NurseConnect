@@ -1,3 +1,9 @@
+/*
+      Nurse.java
+      Author : Siyamthanda Philemon Mnyabiso (221799028)
+     
+ */
+
 package za.ac.cput.domain;
 
 public class Nurse {
