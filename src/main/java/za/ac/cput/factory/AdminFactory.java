@@ -1,3 +1,8 @@
+/*
+      AdminFactory.java
+      Author : Snothando Mangaliso (241177049)
+      Date : 18 March 2025
+ */
 package za.ac.cput.factory;
 
 import za.ac.cput.domain.Admin;
