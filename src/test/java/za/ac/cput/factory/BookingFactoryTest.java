@@ -1,6 +1,6 @@
-package ac.cput.factory;
+package za.ac.cput.factory;
 
-import ac.cput.domain.Booking;
+import za.ac.cput.domain.Booking;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;

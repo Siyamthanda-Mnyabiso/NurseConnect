@@ -10,7 +10,6 @@ import za.ac.cput.factory.NurseFactory;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static za.ac.cput.repository.NurseRepository.repository;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class NurseRepositoryTest {
@@ -21,7 +20,7 @@ class NurseRepositoryTest {
     @Test
     void a_create() {
         Nurse created = repository.create(nurse);
-        assertNull(created);
+        assertNotNull(created);
         System.out.println("Created: "+ created);
     }
 

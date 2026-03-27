@@ -1,5 +1,5 @@
-package ac.cput.factory;
-import ac.cput.domain.Booking;
+package za.ac.cput.factory;
+import za.ac.cput.domain.Booking;
 import za.ac.cput.util.Helper;
 
 public class BookingFactory {

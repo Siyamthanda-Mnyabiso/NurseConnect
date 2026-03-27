@@ -1,4 +1,4 @@
-package ac.cput.domain;
+package za.ac.cput.domain;
 
 public class Booking {
     private String applicationID;

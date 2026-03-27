@@ -1,5 +1,5 @@
-package ac.cput.repository;
-import ac.cput.domain.Booking;
+package za.ac.cput.repository;
+import za.ac.cput.domain.Booking;
 import za.ac.cput.repository.IRepository;
 
 import java.util.List;

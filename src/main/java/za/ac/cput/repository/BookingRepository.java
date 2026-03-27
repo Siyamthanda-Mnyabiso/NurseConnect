@@ -1,6 +1,6 @@
-package ac.cput.repository;
+package za.ac.cput.repository;
 
-import ac.cput.domain.Booking;
+import za.ac.cput.domain.Booking;
 
 import java.util.ArrayList;
 import java.util.List;

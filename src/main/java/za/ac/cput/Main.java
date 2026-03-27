@@ -2,10 +2,10 @@ package za.ac.cput;
 
 import za.ac.cput.domain.Admin;
 import za.ac.cput.domain.Nurse;
-import ac.cput.domain.Booking;
+import za.ac.cput.domain.Booking;
 import za.ac.cput.factory.AdminFactory;
 import za.ac.cput.factory.NurseFactory;
-import ac.cput.factory.BookingFactory;
+import za.ac.cput.factory.BookingFactory;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.

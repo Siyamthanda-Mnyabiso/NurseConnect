@@ -1,7 +1,7 @@
-package ac.cput.repository;
+package za.ac.cput.repository;
 
-import ac.cput.domain.Booking;
-import ac.cput.factory.BookingFactory;
+import za.ac.cput.domain.Booking;
+import za.ac.cput.factory.BookingFactory;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
