@@ -30,9 +30,9 @@ public class BookingRepository implements IBookingRepository {
     }
 
     @Override
-    public Booking read(String nurseID) {
+    public Booking read(String applicationID) {
         for (Booking booking : bookingList){
-            if (booking.getNurseID().equals(nurseID)){
+            if (booking.getApplicationID().equals(applicationID)){
                 return booking;
             }
         }
@@ -41,7 +41,7 @@ public class BookingRepository implements IBookingRepository {
 
     @Override
     public Booking update(Booking booking) {
-        String id = booking.getNurseID();
+        String id = booking.getApplicationID();
         Booking oldBooking = read(id);
         if (oldBooking == null){
             return null;

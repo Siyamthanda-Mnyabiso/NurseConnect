@@ -65,6 +65,13 @@ public class Booking {
             this.status = status;
             return this;
         }
+        public Builder copy(Booking booking){
+            this.applicationID = booking.applicationID;
+            this.applicationDate = booking.applicationDate;
+            this.nurseID = booking.nurseID;
+            this.status = booking.status;
+            return this;
+        }
         public Booking Build(){return new Booking(this);}
     }
 }
