@@ -1,5 +1,5 @@
 /*
-      NurseRepositoryTest.java
+      Nurse.java
       Author : Siyamthanda Philemon Mnyabiso (221799028)
      
  */
