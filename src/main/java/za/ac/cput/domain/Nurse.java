@@ -1,179 +1,177 @@
 package za.ac.cput.domain;
 
 public class Nurse {
-    private String NurseID;
-    private String FirstName;
-    private String LastName;
-    private String Email;
-    private String PhoneNumber;
-    private String Address;
-    private String Qualification;
-    private String Specialization;
-    private String  YearsOfExperience;
-    private boolean AvailabilityStatus;
-    private String LicenseNumber;
+    private String nurseID;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String phoneNumber;
+    private String address;
+    private String qualification;
+    private String specialization;
+    private String yearsOfExperience;
+    private boolean availabilityStatus;
+    private String licenseNumber;
 
 
     private Nurse() {
     }
 
     private Nurse(Builder builder){
-        this.NurseID = builder.NurseID;
-        this.FirstName = builder.firstName;
-        this.Email = builder.Email;
-        this.LastName = builder.LastName;
-        this.PhoneNumber = builder.PhoneNumber;
-        this.Address = builder.Address;
-        this.Qualification = builder.Qualification;
-        this.Specialization = builder.Specialization;
-        this.YearsOfExperience = builder.YearsOfExperience;
-        this.AvailabilityStatus = builder.AvailabilityStatus;
-        this.LicenseNumber = builder.LicenseNumber;
+        this.nurseID = builder.nurseID;
+        this.firstName = builder.firstName;
+        this.email = builder.email;
+        this.lastName = builder.lastName;
+        this.phoneNumber = builder.phoneNumber;
+        this.address = builder.address;
+        this.qualification = builder.qualification;
+        this.specialization= builder.specialization;
+        this.yearsOfExperience = builder.yearsOfExperience;
+        this.availabilityStatus = builder.availabilityStatus;
+        this.licenseNumber = builder.licenseNumber;
     }
 
     public String getNurseID() {
-        return NurseID;
+        return nurseID;
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public String getPhoneNumber() {
-        return PhoneNumber;
+        return phoneNumber;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public String getQualification() {
-        return Qualification;
+        return qualification;
     }
 
     public String getSpecialization() {
-        return Specialization;
+        return specialization;
     }
 
     public String getYearsOfExperience() {
-        return YearsOfExperience;
+        return yearsOfExperience;
     }
 
     public boolean isAvailabilityStatus() {
-        return AvailabilityStatus;
+        return availabilityStatus;
     }
 
     public String getLicenseNumber() {
-        return LicenseNumber;
+        return licenseNumber;
     }
 
     @Override
     public String toString() {
         return "Nurse{" +
-                "NurseID='" + NurseID + '\'' +
-                ", FirstName='" + FirstName + '\'' +
-                ", LastName='" + LastName + '\'' +
-                ", Email='" + Email + '\'' +
-                ", PhoneNumber=" + PhoneNumber +
-                ", Address='" + Address + '\'' +
-                ", Qualification='" + Qualification + '\'' +
-                ", Specialization='" + Specialization + '\'' +
-                ", YearsOfExperience=" + YearsOfExperience +
-                ", AvailabilityStatus=" + AvailabilityStatus +
-                ", LicenseNumber=" + LicenseNumber +
+                "nurseID='" + nurseID + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", address='" + address + '\'' +
+                ", qualification='" + qualification + '\'' +
+                ", specialization='" + specialization + '\'' +
+                ", yearsOfExperience='" + yearsOfExperience + '\'' +
+                ", availabilityStatus=" + availabilityStatus +
+                ", licenseNumber='" + licenseNumber + '\'' +
                 '}';
     }
 
-
     public static class Builder {
-        public String firstName;
-        private String NurseID;
-        private String FirstName;
-        private String LastName;
-        private String Email;
-        private String PhoneNumber;
-        private String Address;
-        private String Qualification;
-        private String Specialization;
-        private String  YearsOfExperience;
-        private boolean AvailabilityStatus;
-        private String LicenseNumber;
+        private String nurseID;
+        private String firstName;
+        private String lastName;
+        private String email;
+        private String phoneNumber;
+        private String address;
+        private String qualification;
+        private String specialization;
+        private String yearsOfExperience;
+        private boolean availabilityStatus;
+        private String licenseNumber;
 
         public Builder setNurseID(String nurseID) {
-            this.NurseID = nurseID;
+            this.nurseID = nurseID;
             return this;
         }
 
         public Builder setFirstName(String firstName) {
-            this.FirstName = firstName;
+            this.firstName = firstName;
             return this;
         }
 
         public Builder setEmail(String email) {
-            this.Email = email;
+            this.email = email;
             return this;
         }
 
         public Builder setLastName(String lastName) {
-            this.LastName = lastName;
+            this.lastName = lastName;
             return this;
         }
 
         public Builder setPhoneNumber(String phoneNumber) {
-            this.PhoneNumber = phoneNumber;
+            this.phoneNumber = phoneNumber;
             return this;
         }
 
         public Builder setAddress(String address) {
-            this.Address = address;
+            this.address = address;
             return this;
         }
 
         public Builder setQualification(String qualification) {
-            this.Qualification = qualification;
+            this.qualification = qualification;
             return this;
         }
 
         public Builder setSpecialization(String specialization) {
-            this.Specialization = specialization;
+            this.specialization = specialization;
             return this;
         }
 
         public Builder setYearsOfExperience(String yearsOfExperience) {
-            this.YearsOfExperience = yearsOfExperience;
+            this.yearsOfExperience = yearsOfExperience;
             return this;
         }
 
         public Builder setAvailabilityStatus(boolean availabilityStatus) {
-            this.AvailabilityStatus = availabilityStatus;
+            this.availabilityStatus = availabilityStatus;
             return this;
         }
 
         public Builder setLicenseNumber(String licenseNumber) {
-            this.LicenseNumber = licenseNumber;
+            this.licenseNumber = licenseNumber;
             return this;
         }
 
         public Nurse.Builder copy (Nurse nurse){
-            this.NurseID = nurse.NurseID;
-            this.FirstName = nurse.FirstName;
-            this.Email = nurse.Email;
-            this.LastName = nurse.LastName;
-            this.PhoneNumber = nurse.PhoneNumber;
-            this.Address = nurse.Address;
-            this.Qualification = nurse.Qualification;
-            this.Specialization = nurse.Specialization;
-            this.YearsOfExperience = nurse.YearsOfExperience;
-            this.AvailabilityStatus = nurse.AvailabilityStatus;
-            this.LicenseNumber = nurse.LicenseNumber;
+            this.nurseID = nurse.nurseID;
+            this.firstName = nurse.firstName;
+            this.email = nurse.email;
+            this.lastName = nurse.lastName;
+            this.phoneNumber = nurse.phoneNumber;
+            this.address = nurse.address;
+            this.qualification = nurse.qualification;
+            this.specialization= nurse.specialization;
+            this.yearsOfExperience = nurse.yearsOfExperience;
+            this.availabilityStatus = nurse.availabilityStatus;
+            this.licenseNumber = nurse.licenseNumber;
             return this;
         }
 

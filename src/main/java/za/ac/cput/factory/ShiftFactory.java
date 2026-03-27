@@ -4,16 +4,15 @@ import za.ac.cput.util.Helper;
 import za.ac.cput.domain.Shift;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 
 public class ShiftFactory {
 
-    public static Shift createShiftFactory(
+    public static Shift createShift(
             String shiftId,
             String hospitalId,
-            LocalDate shiftDate,
-            LocalTime startTime,
-            LocalTime endTime,
+            String shiftDate,
+            String startTime,
+            String endTime,
             String requiredQualification,
             String department,
             double hourlyRates,
@@ -21,8 +20,8 @@ public class ShiftFactory {
 
         if (Helper.isNullOrEmpty(shiftId) || Helper.isNullOrEmpty(hospitalId) ||
                 Helper.isNullOrEmpty(requiredQualification) || Helper.isNullOrEmpty(department) ||
-                Helper.isNullOrEmpty(status) || shiftDate == null || startTime == null ||
-                endTime == null || hourlyRates <= 0) {
+                Helper.isNullOrEmpty(status) || Helper.isNullOrEmpty(shiftDate) || Helper.isNullOrEmpty(startTime) ||
+                Helper.isNullOrEmpty(endTime)) {
 
             return null;
         }

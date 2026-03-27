@@ -8,9 +8,9 @@ public class Shift {
 
     private String shiftId;
     private String hospitalId;
-    private LocalDate shiftDate;
-    private LocalTime startTime;
-    private LocalTime endTime;
+    private String shiftDate;
+    private String startTime;
+    private String endTime;
     private String requiredQualification;
     private String department;
     private double hourlyRate;
@@ -32,23 +32,23 @@ public class Shift {
         this.status = builder.status;
     }
 
-    private String getShiftId() {
+    public String getShiftId() {
         return shiftId;
     }
 
-    private String getHospitalId() {
+    public  String getHospitalId() {
         return hospitalId;
     }
 
-    private LocalDate getShiftDate() {
+    public String getShiftDate() {
         return shiftDate;
     }
 
-    private LocalTime getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
 
-    private LocalTime getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
@@ -60,7 +60,7 @@ public class Shift {
         return department;
     }
 
-    private double getHourlyRate() {
+    public double getHourlyRate() {
         return  hourlyRate;
     }
 
@@ -99,9 +99,9 @@ public class Shift {
     public static class Builder {
         private String shiftId;
         private String hospitalId;
-        private LocalDate shiftDate;
-        private LocalTime startTime;
-        private LocalTime endTime;
+        private String shiftDate;
+        private String startTime;
+        private String endTime;
         private String requiredQualification;
         private String department;
         private double hourlyRate;
@@ -117,17 +117,17 @@ public class Shift {
             return this;
         }
 
-        public Builder setShiftDate(LocalDate shiftDate) {
+        public Builder setShiftDate(String shiftDate) {
             this.shiftDate = shiftDate;
             return this;
         }
 
-        public Builder setStartTime(LocalTime startTime) {
+        public Builder setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setEndTime(LocalTime endTime) {
+        public Builder setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
         }
@@ -149,6 +149,19 @@ public class Shift {
 
         public Builder setStatus(String status) {
             this.status = status;
+            return this;
+        }
+
+        public Shift.Builder copy (Shift shift){
+            this.shiftId = shift.shiftId;
+            this.hospitalId = shift.hospitalId;
+            this.shiftDate = shift.shiftDate;
+            this.startTime = shift.startTime;
+            this.endTime = shift.endTime;
+            this.requiredQualification = shift.requiredQualification;
+            this.department = shift.department;
+            this.hourlyRate = shift.hourlyRate;
+            this.status = shift.status;
             return this;
         }
 
