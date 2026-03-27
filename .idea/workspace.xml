@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65104528-e884-478d-8c79-71a5455bb323" name="Changes" comment="AdminFactoryTest and AdminRepositoryTest">
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/IShiftRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/ShiftRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/ShiftFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/ShiftRepositoryTest.java" afterDir="false" />
+    <list default="true" id="65104528-e884-478d-8c79-71a5455bb323" name="Changes" comment="Booking Repository test and Booking Factory Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Nurse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Nurse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Shift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Shift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/ShiftFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/ShiftFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/BookingFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/BookingFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/NurseFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/NurseFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/NurseRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/NurseRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/za/ac/cput/factory/AdminFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/AdminFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/za/ac/cput/repository/AdminRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/AdminRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,9 +106,8 @@
       <recent name="za.ac.cput.repository" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="za.ac.cput.repository" />
-      <recent name="za.ac.cput.factory" />
       <recent name="ac.cput.repository" />
+      <recent name="za.ac.cput.repository" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.NurseRepositoryTest">
@@ -225,7 +216,7 @@
       <workItem from="1773658798195" duration="18122000" />
       <workItem from="1773844556416" duration="407000" />
       <workItem from="1774598037525" duration="3043000" />
-      <workItem from="1774603829755" duration="12085000" />
+      <workItem from="1774603829755" duration="519000" />
     </task>
     <task id="LOCAL-00001" summary="Added Admin entity">
       <option name="closed" value="true" />
@@ -267,15 +258,7 @@
       <option name="project" value="LOCAL" />
       <updated>1774565233234</updated>
     </task>
-    <task id="LOCAL-00006" summary="AdminFactoryTest and AdminRepositoryTest">
-      <option name="closed" value="true" />
-      <created>1774604684177</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1774604684178</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +292,6 @@
     <MESSAGE value="Factory classes- Admin factory class added" />
     <MESSAGE value="Factory classes- Admin factory class added removed the helper class" />
     <MESSAGE value="Booking Repository test and Booking Factory Test" />
-    <MESSAGE value="AdminFactoryTest and AdminRepositoryTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="AdminFactoryTest and AdminRepositoryTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Booking Repository test and Booking Factory Test" />
   </component>
 </project>
