@@ -1,3 +1,10 @@
+/*
+      Helper.java
+      Author : Siyamthanda Philemon Mnyabiso (221799028)
+      Date : 18 March 2025
+ */
+
+
 package za.ac.cput.util;
 
 
