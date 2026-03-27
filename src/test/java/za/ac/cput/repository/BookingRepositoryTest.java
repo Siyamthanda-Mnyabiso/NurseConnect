@@ -1,3 +1,8 @@
+/*
+      BookingRepositoryTest.java
+      Author : Mvuyisi Mcithwa (220452709)
+      Date : 26 March 2025
+ */
 package za.ac.cput.repository;
 
 import za.ac.cput.domain.Booking;
@@ -50,7 +55,7 @@ class BookingRepositoryTest {
 
     @Test
     void e_getAll() {
-        List<Booking> hospitals = repository.getAll();
-        System.out.println(" Booking: " + hospitals);
+        List<Booking> myBookings = repository.getAll();
+        System.out.println(" Booking: " + myBookings);
     }
 }

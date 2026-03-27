@@ -1,5 +1,9 @@
 package za.ac.cput.domain;
-
+/*
+      Booking.java
+      Author : Mvuyisi Mcithwa (220452709)
+      Date : 16 March 2025
+ */
 public class Booking {
     private String applicationID;
     private String nurseID;
